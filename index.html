@@ -1,1 +1,42 @@
-../random-pixels/index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script src="./main.js"></script>
+    <link rel="stylesheet" media="all" href="main.css">
+  </head>
+  <body>
+    <h1>Generate a random pixel image!</h1>
+    <div id="wrapper">
+      <div>
+        <h2>Settings:</h2>
+        <div>
+          <label>Transparent?</label>
+          <input id="transparent" type="checkbox">
+        </div>
+        <div>
+          <label>Width </label>
+          <input id="widthRange" type="range" min=0 max=500 value=50 onchange="this.nextElementSibling.value=this.value">
+          <input id="widthInput" type="number" min=0 max=500 value=50  onchange="this.form.previousElementSibling.value=this.value">
+        </div>
+        <div>
+          <label>Height</label>
+          <input id="heightRange" type="range" min=0 max=500 value=50  onchange="this.nextElementSibling.value=this.value">
+          <input id="heightInput" type="number" min=0 max=500 value=50  onchange="this.previousElementSibling.value=this.value">
+        </div>
+        <div>
+          <label>Pixel</label>
+          <input id="pixelRange" type="range" min=1 max=50 value=5  onchange="this.nextElementSibling.value=this.value">
+          <input id="pixelInput" type="number" min=1 max=50 value=5  onchange="this.previousElementSibling.value=this.value">
+        </div>
+        <button onclick="generate()">Generate</button>
+        <button id="saveButton" onclick="save()" disabled="disabled">Save</button>
+      </div>
+      <div id="result">
+        <h2>Result:</h2>
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
