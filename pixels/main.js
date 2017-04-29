@@ -30,8 +30,14 @@ function generate() {
         ctx.fillRect(x, y, pixel, pixel);
     }
   }
-
+  
   document.getElementById('saveButton').disabled = "";
+}
+
+function feelingLucky() {
+	generate();
+	save();
+	window.location = canvas.toDataURL("image/png");
 }
 
 function save() {
