@@ -1,5 +1,5 @@
 function randomHex() {
-  return 255 * Math.random();
+  return 255 * Math.random() | 0;
 }
 
 function randomColor(transparent) {
