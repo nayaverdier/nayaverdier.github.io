@@ -26,7 +26,7 @@ function generate(draw = true) {
     var prerender = document.createElement('canvas');
     var preCtx = prerender.getContext('2d');
 
-    // Round canvas down to the nearest "pixel"
+    // Round canvas down to the nearest "pixel" so it doesn't cut it off
     preCtx.canvas.width = width -= (width % pixel);
     preCtx.canvas.height = height -= (height % pixel);
 
@@ -53,7 +53,6 @@ function generate(draw = true) {
 }
 
 function feelingLucky() {
-    generate(false); // Don't draw to page
     save(generate(false));
 }
 
