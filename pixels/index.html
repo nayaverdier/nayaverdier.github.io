@@ -17,18 +17,18 @@
         </div>
         <div>
           <label>Width </label>	
-          <input id="widthRange" type="range" min=1 max=500 value=50 onchange="this.nextElementSibling.value=this.value">
-          <input id="widthInput" type="number" min=1 max=500 value=50  onchange="this.previousElementSibling.value=this.value">
+          <input id="widthRange" type="range" min=1 max=500 value=256 onchange="this.nextElementSibling.value=this.value">
+          <input id="widthInput" type="number" min=1 max=500 value=256  onchange="this.previousElementSibling.value=this.value">
         </div>
         <div>
           <label>Height</label>
-          <input id="heightRange" type="range" min=1 max=500 value=50  onchange="this.nextElementSibling.value=this.value">
-          <input id="heightInput" type="number" min=1 max=500 value=50  onchange="this.previousElementSibling.value=this.value">
+          <input id="heightRange" type="range" min=1 max=500 value=256  onchange="this.nextElementSibling.value=this.value">
+          <input id="heightInput" type="number" min=1 max=500 value=256  onchange="this.previousElementSibling.value=this.value">
         </div>
         <div>
           <label>Pixel</label>
-          <input id="pixelRange" type="range" min=1 max=50 value=5  onchange="this.nextElementSibling.value=this.value">
-          <input id="pixelInput" type="number" min=1 max=50 value=5  onchange="this.previousElementSibling.value=this.value">
+          <input id="pixelRange" type="range" min=1 max=50 value=16  onchange="this.nextElementSibling.value=this.value">
+          <input id="pixelInput" type="number" min=1 max=50 value=16  onchange="this.previousElementSibling.value=this.value">
         </div>
         <button onclick="generate()">Generate</button>
         <button onclick="feelingLucky()">I'm Feeling Lucky</button>
