@@ -69,3 +69,12 @@ function downloadUrl(url) {
     document.body.appendChild(link);
     link.click();
 }
+
+// Change the next/previous input to match the argument
+function syncNext(input) {
+    input.nextElementSibling.value = input.value;
+}
+
+function syncPrev(input) {
+    input.previousElementSibling.value = input.value;
+}
